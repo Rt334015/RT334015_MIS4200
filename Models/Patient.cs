@@ -9,6 +9,7 @@ namespace RT334015_MIS4200.Models
     {
         public int patientId { get; set; }
         public string firstName { get; set; }
+
         public string lastName { get; set; }
         public string email { get; set; }
         public string phone { get; set; }
