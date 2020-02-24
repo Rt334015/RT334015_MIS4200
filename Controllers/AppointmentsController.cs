@@ -40,8 +40,8 @@ namespace RT334015_MIS4200.Controllers
         // GET: Appointments/Create
         public ActionResult Create()
         {
-            ViewBag.doctorId = new SelectList(db.Doctor, "doctorId", "doctorFirstName");
-            ViewBag.patientId = new SelectList(db.Patient, "patientId", "firstName");
+            ViewBag.doctorId = new SelectList(db.Doctor, "doctorId", "fullName");
+            ViewBag.patientId = new SelectList(db.Patient, "patientId", "fullName");
             return View();
         }
 
@@ -59,8 +59,8 @@ namespace RT334015_MIS4200.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.doctorId = new SelectList(db.Doctor, "doctorId", "doctorFirstName", appointment.doctorId);
-            ViewBag.patientId = new SelectList(db.Patient, "patientId", "firstName", appointment.patientId);
+            ViewBag.doctorId = new SelectList(db.Doctor, "doctorId", "fullName", appointment.doctorId);
+            ViewBag.patientId = new SelectList(db.Patient, "patientId", "fullName", appointment.patientId);
             return View(appointment);
         }
 
@@ -76,8 +76,8 @@ namespace RT334015_MIS4200.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.doctorId = new SelectList(db.Doctor, "doctorId", "doctorFirstName", appointment.doctorId);
-            ViewBag.patientId = new SelectList(db.Patient, "patientId", "firstName", appointment.patientId);
+            ViewBag.doctorId = new SelectList(db.Doctor, "doctorId", "fullName", appointment.doctorId);
+            ViewBag.patientId = new SelectList(db.Patient, "patientId", "fullName", appointment.patientId);
             return View(appointment);
         }
 
@@ -94,8 +94,8 @@ namespace RT334015_MIS4200.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.doctorId = new SelectList(db.Doctor, "doctorId", "doctorFirstName", appointment.doctorId);
-            ViewBag.patientId = new SelectList(db.Patient, "patientId", "firstName", appointment.patientId);
+            ViewBag.doctorId = new SelectList(db.Doctor, "doctorId", "fullName", appointment.doctorId);
+            ViewBag.patientId = new SelectList(db.Patient, "patientId", "fullName", appointment.patientId);
             return View(appointment);
         }
 

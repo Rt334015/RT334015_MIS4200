@@ -11,6 +11,7 @@ namespace RT334015_MIS4200.Models
         
         
         public int patientId { get; set; }
+        public string fullName { get { return lastName + ", " + firstName; } }
 
         [Display(Name = "First Name")]
         [Required(ErrorMessage = "Student First Name is Required")]

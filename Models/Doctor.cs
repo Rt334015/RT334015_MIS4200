@@ -14,6 +14,7 @@ namespace RT334015_MIS4200.Models
         [StringLength(50)]
 
         public string experience { get; set; }
+        public string fullName { get { return doctorLastName + ", " + doctorFirstName; } }
 
         [Display(Name = "First Name")]
         [Required(ErrorMessage = "Doctor First Name is Required")]

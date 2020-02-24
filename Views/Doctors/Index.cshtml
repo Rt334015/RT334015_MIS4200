@@ -9,7 +9,7 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+<table class="table table-bordered table-hover table-striped">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.experience)
@@ -47,9 +47,9 @@
             @Html.DisplayFor(modelItem => item.doctorPhone)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.doctorId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.doctorId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.doctorId })
+            @Html.ActionLink("Edit", "Edit", new { id = item.doctorId }) <span class="glyphicon">&#x270f;</span> |
+        @Html.ActionLink("Details", "Details", new { id = item.doctorId }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.doctorId }) 
         </td>
     </tr>
 }
