@@ -9,6 +9,7 @@ namespace RT334015_MIS4200.Migrations.MISContext
     {
         public Configuration()
         {
+            AutomaticMigrationDataLossAllowed = true;
             AutomaticMigrationsEnabled = true;
             MigrationsDirectory = @"Migrations\MISContext";
             ContextKey = "RT334015_MIS4200.Models.DAL.MIS4200Context";

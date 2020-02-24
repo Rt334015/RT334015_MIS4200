@@ -24,9 +24,22 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+
+                    <div class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle">
+                            Dropdown
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Doctors", "Index", "Doctors")</li>
+                            <li>@Html.ActionLink("Appointments", "Index", "Appointments")</li>
+                            <li>@Html.ActionLink("Patients", "Index", "Patients")</li>
+                        </ul>
+                    </div>
                 </ul>
-                @Html.Partial("_LoginPartial")
+
             </div>
+            @Html.Partial("_LoginPartial")
         </div>
     </div>
     <div class="container body-content">

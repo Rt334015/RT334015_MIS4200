@@ -11,16 +11,20 @@ namespace RT334015_MIS4200.Models
         [Key]
         public int appointmentId { get; set; }
 
+        [Display(Name = "Description")]
+        [StringLength(50)]
+
         public string description { get; set; }
         public DateTime apptDate { get; set; }
 
         
-
         public int patientId { get; set; }
         public virtual Patient Patient { get; set; }
 
         public int doctorId { get; set; }
         public virtual Doctor Doctor { get; set; }
+
+        
 
 
 
